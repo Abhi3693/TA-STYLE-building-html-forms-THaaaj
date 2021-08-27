@@ -1,0 +1,164 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* variables */
+:root {
+    --primary:rgb(95,85,163);
+    --bg:rgba(254,121,121,0.9);
+    --text:rgb(255,253,252);
+    --button:rgb(55,205,139);
+    --white:rgb(255 255 255);
+    --term:rgb(234,145,149);
+}
+
+
+/* custom style */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p,span,.type-control {
+    font-family: 'Roboto', sans-serif;
+}
+/* general */
+
+.container {
+    max-width: 1000px;
+    margin: 50px auto;
+    height: 100vh;
+}
+.flex-40 {
+    flex: 0 1 40%;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* section */
+
+section {
+    background:var(--bg) url(../media/bg-intro-desktop.png) 50% 50% no-repeat ;
+    background-size: cover;
+    height: 100vh;
+}
+.article {
+    display: flex;
+    
+}
+.form-top {
+    background-color: var(--primary);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 3px rgba(0,0,0,0.4);
+}
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text);
+}
+p {
+    font-size: 12px;
+    color: var(--text);
+    font-weight: 100;
+}
+strong {
+    font-size: 14px;
+    font-weight: 900;
+}
+.input-control {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: 1px solid lightgray;
+    outline: none;
+} 
+.input-control:focus {
+    border-color:gray;
+}
+form {
+    padding: 40px 30px;
+    background-color: var(--white);
+    border-radius: 5px;
+    box-shadow: 0 4px 3px rgba(0,0,0,0.4);
+}
+.btn {
+    width: 100%;
+    background-color: var(--button);
+    color: var(--text);
+    text-transform: uppercase;
+    padding: 20px;
+    border: none;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.term {
+    color: lightgray;
+    text-align: center;
+    font-size: 10px;
+}
+span {
+    color: red;
+}
