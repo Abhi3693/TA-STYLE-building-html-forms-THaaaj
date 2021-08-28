@@ -73,6 +73,7 @@ table {
 body {
     line-height: 1.5;
     font-family: 'Roboto', sans-serif;
+    color: var(--text);
 }
 section{
     font-size: 0;
@@ -89,24 +90,6 @@ p {
     font-size: 12px;
     color: var(--text-a);
 }
-label {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-a);
-    text-transform: capitalize;
-    text-align: start;
-}
-.form-control {
-    background-color: var(--form-bg);
-    border: 1px solid var(--form-bg);
-    padding: 8px;
-    outline: 0;
-    width: 95%;
-    margin: 10px 0 0 0;
-}
-.form-control:focus {
-    border-color: lightgray;
-}
 main {
     background-color: var(--bg-pri);
 }
@@ -121,15 +104,8 @@ main {
 .article {
     position: relative;
 }
-.article-text {
-    padding: 30px;
-    width: 50%;
-}
 .article-text p {
     margin: 10px 0;
-}
-.article-image-container {
-    width: 50%;
 }
 .article-image {
     width: 100%;
@@ -154,26 +130,37 @@ main {
 }
 /* general */
 
-.flex {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .container {
     max-width: 1000px;
     margin: 0 auto;
     background-color: var(--white);
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.5);
 }
+.font-0 {
+    font: 0;
+}
+
+/* Padding */
+
+.padding {
+    padding: 50px 0;
+}
+
+/* text Center */
+
+.text-center {
+    text-align: center;
+}
+
+/* Button */
+
 .btn {
     text-transform: uppercase;
     font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
 }
-.btn-premary {
+.btn-primary {
     background-color: var(--green); 
     color: var(--white);
     border: none;
@@ -184,21 +171,48 @@ main {
     color: var(--green);
     padding: 10px;
 }
+
+/* Flex */
+
 .flex-50 {
     flex: 0 1 50%;
 }
-.arrow-position {
-    position: absolute;
-    left: 380px;
-    bottom: 165px;
+.flex-70 {
+    flex: 0 1 70%;
 }
-.arrow-position-2 {
-    position: absolute;
-    left: 550px;
-    bottom: 165px;
+.flex-30 {
+    flex: 0 1 30%;
 }
-.padding-50px {
-    padding: 50px 0;
+.flex-25 {
+    flex: 0 1 25%;
+}
+.flex-20 {
+    flex: 0 1 20%;
+} 
+.flex-45 {
+    flex: 0 1 48%;
+}
+.flex-40 {
+    flex: 0 1 40%;
+}
+.only-flex {
+    display: flex;
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.stretch {
+    align-items: stretch;
 }
 /* headings */
 
@@ -206,18 +220,17 @@ h1 {
     font-size: 36px;
     text-transform: uppercase;
     font-weight: 500;
-    color: var(--text);
     margin-top: 20px;
 }
 h2 {
     font-size: 22px;
     font-weight: 400;
     text-transform: uppercase;
+    color: var(--text-a);
 }
 h3 {
     font-size: 26px;
     font-weight: 500;
-    color: var(--white);
 }
 h4 {
     font-size: 16px;
@@ -228,15 +241,12 @@ h4 {
 /* header */
 
 .header {
+    padding: 10px 160px;
     position: sticky;
     top: 0;
     background-color: var(--white);
     z-index: 1;
-}
-.header-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 10px;
+    box-shadow: none;
 }
 .nav-bar a{
     margin-left: 20px;
@@ -260,15 +270,6 @@ h4 {
     background-size: cover;
     padding: 50px 0;
 }
-.hero-content {
-    text-align: center;
-}
-.hero-form {
-    width: 70%;
-    margin: 0px auto;
-    background-color: var(--white);
-    padding: 20px;
-}
 .down-arrow {
     font-size: 10px;
     padding: 10px;
@@ -284,68 +285,210 @@ h4 {
     font-weight: 300;
     word-spacing: 0.5px;
     letter-spacing: 0.3px;
+}
 
+/* form */
+
+.hero-form {
+    width: 70%;
+    margin: 0px auto;
+    background-color: var(--white);
+    padding: 20px;
+}
+label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-a);
+    text-transform: capitalize;
+    text-align: start;
+}
+.form-control-2 {
+    width: 45%;
+}
+.form-control {
+    background-color: var(--form-bg);
+    border: 1px solid var(--form-bg);
+    padding: 8px;
+    outline: 0;
+    width: 100%;
+    margin: 10px 0 0px 0;
+    color: #ccc;
 }
 .form-control-1 {
-    width:95%;
-    display: block;
-    margin-bottom: 20px;
-}
-.form-control-3 {
-    margin-bottom: 50px;
-}
-.hero-field-2 .btn-premary {
     width: 100%;
+    margin-bottom: 10px;
+}
+.form-control::placeholder {
+    color: #ccc;
+}
+.form-control:focus {
+    border-color: lightgray;
+}
+.form-btn {
+    width: 100%;
+    margin-top: 40px;
+    padding: 8px;
 }
 .dot-container {
     margin: 10px 0;
 }
+/* about */
 
-/* section-2 */
-
-.article-1 {
+.about {
     background-color: var(--bg-sec);
-    padding: 40px 100px;
     text-align: center;
 }
-.article-1 p {
+.about-wrapper {
+    max-width: 70%;
+    margin: 0 auto;
+}
+.about p {
     margin: 20px 0;
 }
 
-/* section-3*/
+/* Blog */
 
-.article-text-2 {
+.article-col-left {
+    position: relative;
+}
+.nav-btn {
+    height:40px ;
+    width: 40px;
+    background-color: rgba(0,0,0,0.5) ;
+    margin: 0 5px;
+}
+.nav-btn-container-left {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+}
+
+.article-col-right {
     background-color: var(--green);
+    padding: 32px;
+    position: relative;
+    z-index: 1;
+    left: -40px;
+}
+.article .btn-secondary {
+    background-color: white;
+    margin-top: 10px;
+    display: inline-block;
 }
 
-/* section-4 */
+/* Article 2 */
 
-.article-text-3 {
+.article-2 .article-col-right {
     background-color: var(--red);
+    left: 40px;
 }
-.article-3 .btn-secondary {
+.nav-btn-container-right {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+}
+.article-2 .btn-secondary {
     color: var(--red);
 }
-/* section-5 */
 
-.article-text-4 {
-    background-color: var(--green);
-}
+/* Maps */
 
-/* section-6 */
-.continet-container {
+.maps-container {
     background-color: var(--green);
     padding: 20px;
     text-align: center;
     width: 200px;
 }
-.continet-container p {
+.maps-container:hover {
+    background-color: var(--red);
+}
+.maps-container p {
     color: var(--text);
     font-size: 12px;
 }
-.continet-container-1 {
+.maps .active {
     background-color: var(--red);
 }
+/* Recommonded places */
+.recommended-items {
+    max-width: 70%;
+    background-color: var(--green);
+    margin: 20px auto;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.width-full {
+    width: 100%;
+}
+.recommended-items-content {
+    background-color: var(--white);
+    padding: 20px;
+    position: relative;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.recommended-items-priceing span {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+}
+.recommended-items-priceing a {
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+.recommended-items-priceing {
+    flex-direction: column;
+}
+.btn-curve {
+    position: absolute;
+    right: -24px;
+    top: 0;
+    height: 100%;
+}
+
+/* contact */
+
+.contact {
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+.article-text-4 {
+    background-color: var(--green);
+}
+.contact .btn-primary {
+    width: 100%;
+}
+.contact-form {
+    background-color: var(--white);
+    padding: 20px;
+    display: inline-block;
+    width: 40%;
+    position: absolute;
+    right: 150px;
+    bottom: 80px;
+}
+.bottom-form-control {
+    width: 48%;
+} 
+.bottom-form-control-1 {
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
+.bottom-form-control-text-area {
+    width: 100%;
+    margin-bottom: 10px;
+}
+/* sectio
 
 
 /* section-7 */
@@ -399,26 +542,8 @@ h4 {
 .contact-article {
     position: relative;
 }
-.bottom-form {
-    background-color: var(--white);
-    padding: 20px;
-    display: inline-block;
-    width: 40%;
-    position: absolute;
-    right: 150px;
-    bottom: 80px;
-}
-.bottom-form-control {
-    width: 48%;
-} 
-.bottom-form-control-1 {
-    width: 100%;
-    margin: 10px 0 10px 0;
-}
-.bottom-form-control-text-area {
-    width: 100%;
-    margin-bottom: 10px;
-}
+
+
 /* footer */
 
 footer {
